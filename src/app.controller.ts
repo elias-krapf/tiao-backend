@@ -1,11 +1,11 @@
-import {Controller, Get} from "@nestjs/common";
+import {Controller, Get, HttpException, HttpStatus} from "@nestjs/common";
 
 @Controller('/test')
 export class AppController {
 
     @Get()
-    public getTest(): string {
-        return "asdfd";
+    public getTest(): any {
+        return {test: 'abc'};
     }
 
 }
